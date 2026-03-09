@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YalaCode | Yala Business</title>
+  <meta
+    name="description"
+    content="YalaCode Business provides website development, shop data analysis, logo & branding, and social media campaigns for growing businesses."
+  />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Header -->
+  <header class="header" id="top">
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="Go to top">
+        <img class="logo-img" src="logo.png" alt="YalaCode | Yala Business Logo" />
+        <span class="logo-text">
+          Yala<span class="muted">Code</span>
+          <span class="muted">|</span>
+          Yala<span class="muted">Business</span>
+        </span>
+      </a>
+
+      <div class="nav-actions">
+        <button class="lang-btn" id="langToggle" type="button" aria-label="Switch language">AR</button>
+        <button class="theme-btn" id="themeToggle" aria-label="Toggle theme" type="button">🌙</button>
+        <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false" type="button">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+
+      <nav class="links" id="navLinks">
+        <a href="#about" data-i18n="nav_about">About</a>
+        <a href="#services" data-i18n="nav_services">Services</a>
+        <a href="#work" data-i18n="nav_work">Work</a>
+        <a href="#contact" class="btn small" data-i18n="nav_contact">Contact</a>
+
+        <a class="social-link" href="https://www.facebook.com/Yaalacode/" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M22 12.07C22 6.49 17.52 2 12 2S2 6.49 2 12.07C2 17.06 5.66 21.2 10.44 22v-7h-3v-3h3V9.5c0-3 1.79-4.66 4.53-4.66 1.31 0 2.68.23 2.68.23v3h-1.51c-1.49 0-1.95.93-1.95 1.88V12h3.33l-.53 3h-2.8v7C18.34 21.2 22 17.06 22 12.07z"/>
+          </svg>
+        </a>
+
+        <a class="social-link" href="https://www.youtube.com/@yalacode" target="_blank" rel="noopener" aria-label="YouTube">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor" aria-hidden="true">
+            <path d="M23.5 6.2s-.2-1.7-.8-2.5c-.8-1-1.7-1-2.1-1C17.8 2.5 12 2.5 12 2.5h-.1s-5.8 0-8.6.2c-.4 0-1.3 0-2.1 1C.6 4.5.5 6.2.5 6.2S.3 8.1.3 10v1.9c0 1.9.2 3.8.2 3.8s.2 1.7.8 2.5c.8 1 1.9 1 2.4 1.1 1.8.2 7.3.2 8.3.2h.1s5.8 0 8.6-.2c.4 0 1.3 0 2.1-1 .6-.8.8-2.5.8-2.5s.2-1.9.2-3.8V10c0-1.9-.2-3.8-.2-3.8zM9.8 14.6V8.7l5.6 2.9-5.6 3z"/>
+          </svg>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-grid">
+      <div class="hero-left">
+        <p class="kicker reveal" data-i18n="hero_kicker">Websites • Data Analysis • Branding • Social Media</p>
+
+        <h1 class="reveal" data-i18n="hero_title">
+          Grow faster with <span class="accent">YalaCode | Yala Business</span>
+        </h1>
+
+        <p class="lead reveal" data-i18n="hero_text">
+          Professional digital solutions for businesses and brands: modern websites, smart data insights, visual identity design, and social media growth strategies.
+        </p>
+
+        <div class="cta reveal">
+          <a class="btn primary" href="#services" data-i18n="hero_btn_1">Explore Services</a>
+          <a class="btn" href="#contact" data-i18n="hero_btn_2">Get a Quote</a>
+        </div>
+
+        <div class="stats reveal">
+          <div class="stat">
+            <span class="stat-num" data-i18n="stat_1_num">Fast</span>
+            <span class="stat-label" data-i18n="stat_1_label">Delivery & Updates</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-i18n="stat_2_num">Clean</span>
+            <span class="stat-label" data-i18n="stat_2_label">Modern UI Design</span>
+          </div>
+          <div class="stat">
+            <span class="stat-num" data-i18n="stat_3_num">Smart</span>
+            <span class="stat-label" data-i18n="stat_3_label">Data-Driven Results</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-right reveal">
+        <div class="card glass">
+          <h3 data-i18n="quick_title">Quick Request</h3>
+          <p class="muted" data-i18n="quick_text">Tell us what you need — we reply quickly.</p>
+
+          <form id="miniQuote" class="mini-form">
+            <label>
+              <span data-i18n="form_service">Service</span>
+              <select name="service" class="input" required>
+                <option value="" selected disabled data-i18n="select_service">Select a service</option>
+                <option value="Website Development" data-i18n="service_web">Website Development</option>
+                <option value="Shop Data Analysis" data-i18n="service_data">Shop Data Analysis</option>
+                <option value="Logo & Branding" data-i18n="service_brand">Logo & Branding</option>
+                <option value="Social Media Campaigns" data-i18n="service_social">Social Media Campaigns</option>
+                <option value="Business Package" data-i18n="service_package">Business Package</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="form_name">Your Name</span>
+              <input name="name" class="input" type="text" data-i18n-placeholder="your_name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              <span data-i18n="form_message">Message</span>
+              <textarea name="message" class="input" rows="3" data-i18n-placeholder="short_details" placeholder="Short details..." required></textarea>
+            </label>
+
+            <button class="btn primary" type="submit" data-i18n="send_request">Send Request</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section class="section" id="about">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="about_title">About</h2>
+        <p class="muted" data-i18n="about_subtitle">Simple process. Professional results.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card reveal">
+          <h3 data-i18n="about_what_title">What we do</h3>
+          <p data-i18n="about_what_text">
+            We help businesses build a strong digital presence and make smarter decisions using data. Our focus is clean design, clear communication, and measurable business growth.
+          </p>
+          <ul class="checks">
+            <li data-i18n="about_check_1">✅ Professional layouts</li>
+            <li data-i18n="about_check_2">✅ Clear process & deliverables</li>
+            <li data-i18n="about_check_3">✅ Results-focused solutions</li>
+          </ul>
+        </article>
+
+        <article class="card reveal">
+          <h3 data-i18n="about_how_title">How it works</h3>
+          <ol class="steps">
+            <li data-i18n="step_1"><b>1)</b> You send your requirements</li>
+            <li data-i18n="step_2"><b>2)</b> We propose the plan + cost</li>
+            <li data-i18n="step_3"><b>3)</b> We deliver the first draft</li>
+            <li data-i18n="step_4"><b>4)</b> Revisions + final delivery</li>
+          </ol>
+          <div class="note muted small" data-i18n="about_tip">Tip: use the contact form below for a quick response.</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section class="section" id="services">
+    <div class="container">
+      <div class="section-head reveal row">
+        <div>
+          <h2 data-i18n="services_title">Services</h2>
+          <p class="muted" data-i18n="services_subtitle">Choose a service and let us build something great.</p>
+        </div>
+
+        <div class="filters reveal">
+          <input id="serviceSearch" class="input" type="search" data-i18n-placeholder="search_services" placeholder="Search services..." />
+          <select id="serviceTag" class="input">
+            <option value="all" data-i18n="filter_all">All</option>
+            <option value="web" data-i18n="filter_web">Web</option>
+            <option value="data" data-i18n="filter_data">Data</option>
+            <option value="brand" data-i18n="filter_brand">Brand</option>
+            <option value="social" data-i18n="filter_social">Social</option>
+            <option value="package" data-i18n="filter_package">Package</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="grid-3 reveal" id="serviceGrid">
+        <article class="card service-card" data-tags="web" data-title="Website Development">
+          <div class="card-top">
+            <span class="badge" data-i18n="badge_web">Web</span>
+            <span class="badge subtle" data-i18n="badge_responsive">Responsive</span>
+          </div>
+          <h3 data-i18n="card_web_title">Website Development</h3>
+          <p class="muted" data-i18n="card_web_text">Business website, landing page, or portfolio with a modern design.</p>
+          <ul class="list">
+            <li data-i18n="card_web_li1">Fast and mobile-friendly</li>
+            <li data-i18n="card_web_li2">SEO-ready structure</li>
+            <li data-i18n="card_web_li3">Clean, professional UI</li>
+          </ul>
+          <a class="link" href="#contact" data-preset="Website Development" data-i18n="request_this">Request this</a>
+        </article>
+
+        <article class="card service-card" data-tags="data" data-title="Shop Data Analysis">
+          <div class="card-top">
+            <span class="badge" data-i18n="badge_data">Data</span>
+            <span class="badge subtle">KPIs</span>
+          </div>
+          <h3 data-i18n="card_data_title">Shop Data Analysis</h3>
+          <p class="muted" data-i18n="card_data_text">Sales, inventory, and KPI dashboards for shops and small businesses.</p>
+          <ul class="list">
+            <li data-i18n="card_data_li1">Excel / Power BI dashboards</li>
+            <li data-i18n="card_data_li2">Sales and profit insights</li>
+            <li data-i18n="card_data_li3">Clear recommendations</li>
+          </ul>
+          <a class="link" href="#contact" data-preset="Shop Data Analysis" data-i18n="request_this">Request this</a>
+        </article>
+
+        <article class="card service-card" data-tags="brand" data-title="Logo & Branding">
+          <div class="card-top">
+            <span class="badge" data-i18n="badge_brand">Brand</span>
+            <span class="badge subtle" data-i18n="badge_identity">Identity</span>
+          </div>
+          <h3 data-i18n="card_brand_title">Logo & Branding</h3>
+          <p class="muted" data-i18n="card_brand_text">Logo, color palette, typography, and brand assets for a strong image.</p>
+          <ul class="list">
+            <li data-i18n="card_brand_li1">Professional logo files</li>
+            <li data-i18n="card_brand_li2">Brand guidelines PDF</li>
+            <li data-i18n="card_brand_li3">Social media templates</li>
+          </ul>
+          <a class="link" href="#contact" data-preset="Logo & Branding" data-i18n="request_this">Request this</a>
+        </article>
+
+        <article class="card service-card" data-tags="social" data-title="Social Media Campaigns">
+          <div class="card-top">
+            <span class="badge" data-i18n="badge_social">Social</span>
+            <span class="badge subtle" data-i18n="badge_growth">Growth</span>
+          </div>
+          <h3 data-i18n="card_social_title">Social Media Campaigns</h3>
+          <p class="muted" data-i18n="card_social_text">Content planning, design, and strategy for stronger online reach.</p>
+          <ul class="list">
+            <li data-i18n="card_social_li1">Monthly content calendar</li>
+            <li data-i18n="card_social_li2">Ad creatives & captions</li>
+            <li data-i18n="card_social_li3">Performance tracking</li>
+          </ul>
+          <a class="link" href="#contact" data-preset="Social Media Campaigns" data-i18n="request_this">Request this</a>
+        </article>
+
+        <article class="card service-card" data-tags="package,web,brand,data,social" data-title="Business Package">
+          <div class="card-top">
+            <span class="badge" data-i18n="badge_bundle">Bundle</span>
+            <span class="badge subtle" data-i18n="badge_best_value">Best Value</span>
+          </div>
+          <h3 data-i18n="card_package_title">Business Package</h3>
+          <p class="muted" data-i18n="card_package_text">Website, branding, analytics, and social media starter in one package.</p>
+          <ul class="list">
+            <li data-i18n="card_package_li1">All-in-one business setup</li>
+            <li data-i18n="card_package_li2">Consistent visual identity</li>
+            <li data-i18n="card_package_li3">Client-ready presentation</li>
+          </ul>
+          <a class="link" href="#contact" data-preset="Business Package" data-i18n="request_this">Request this</a>
+        </article>
+
+        <article class="card service-card" data-tags="package,web,social,brand" data-title="Digital Launch Package">
+          <div class="card-top">
+            <span class="badge" data-i18n="badge_launch">Launch</span>
+            <span class="badge subtle" data-i18n="badge_starter">Starter</span>
+          </div>
+          <h3 data-i18n="card_launch_title">Digital Launch Package</h3>
+          <p class="muted" data-i18n="card_launch_text">A smart starter package for new businesses entering the market.</p>
+          <ul class="list">
+            <li data-i18n="card_launch_li1">Landing page setup</li>
+            <li data-i18n="card_launch_li2">Basic branding kit</li>
+            <li data-i18n="card_launch_li3">Social launch support</li>
+          </ul>
+          <a class="link" href="#contact" data-preset="Digital Launch Package" data-i18n="request_this">Request this</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="section" id="work">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="work_title">Work</h2>
+        <p class="muted" data-i18n="work_subtitle">Examples of digital solutions we can deliver.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <article class="card">
+          <h3 data-i18n="work_1_title">Business Website</h3>
+          <p class="muted" data-i18n="work_1_text">Modern landing page with clear sections and fast loading performance.</p>
+          <div class="chips">
+            <span class="chip">UI</span>
+            <span class="chip">Responsive</span>
+            <span class="chip">SEO</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="work_2_title">Sales Dashboard</h3>
+          <p class="muted" data-i18n="work_2_text">KPIs, trends, best sellers, stock alerts, and profit insights.</p>
+          <div class="chips">
+            <span class="chip">Power BI</span>
+            <span class="chip">KPIs</span>
+            <span class="chip">Reports</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3 data-i18n="work_3_title">Brand Kit</h3>
+          <p class="muted" data-i18n="work_3_text">Logo set, color palette, typography, and social templates.</p>
+          <div class="chips">
+            <span class="chip">Logo</span>
+            <span class="chip">Identity</span>
+            <span class="chip">Templates</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="section" id="pricing">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="pricing_title">Pricing</h2>
+        <p class="muted" data-i18n="pricing_subtitle">Flexible packages based on your project needs.</p>
+      </div>
+
+      <div class="grid-3 reveal">
+        <article class="card price">
+          <div class="price-top">
+            <h3 data-i18n="price_1_title">Starter</h3>
+            <p class="muted" data-i18n="price_1_sub">For quick business needs</p>
+          </div>
+          <div class="price-num" data-i18n="price_on_request">Price on request</div>
+          <ul class="checks">
+            <li data-i18n="price_1_li1">✅ Basic design or consultation</li>
+            <li data-i18n="price_1_li2">✅ 1 revision</li>
+            <li data-i18n="price_1_li3">✅ Delivery in 2–3 days</li>
+          </ul>
+          <a class="btn" href="#contact" data-preset="Starter Package" data-i18n="choose_starter">Choose Starter</a>
+        </article>
+
+        <article class="card price featured">
+          <div class="price-top">
+            <h3 data-i18n="price_2_title">Business</h3>
+            <p class="muted" data-i18n="price_2_sub">Most popular</p>
+          </div>
+          <div class="price-num" data-i18n="price_on_request">Price on request</div>
+          <ul class="checks">
+            <li data-i18n="price_2_li1">✅ Website or full branding</li>
+            <li data-i18n="price_2_li2">✅ 3 revisions</li>
+            <li data-i18n="price_2_li3">✅ Priority delivery</li>
+          </ul>
+          <a class="btn primary" href="#contact" data-preset="Business Package" data-i18n="choose_business">Choose Business</a>
+        </article>
+
+        <article class="card price">
+          <div class="price-top">
+            <h3 data-i18n="price_3_title">Pro</h3>
+            <p class="muted" data-i18n="price_3_sub">For serious growth</p>
+          </div>
+          <div class="price-num" data-i18n="price_on_request">Price on request</div>
+          <ul class="checks">
+            <li data-i18n="price_3_li1">✅ Website + Branding + Social starter</li>
+            <li data-i18n="price_3_li2">✅ KPI report/dashboard</li>
+            <li data-i18n="price_3_li3">✅ Support for 14 days</li>
+          </ul>
+          <a class="btn" href="#contact" data-preset="Pro Package" data-i18n="choose_pro">Choose Pro</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section" id="contact">
+    <div class="container">
+      <div class="section-head reveal">
+        <h2 data-i18n="contact_title">Contact</h2>
+        <p class="muted" data-i18n="contact_subtitle">Send a message — we respond quickly.</p>
+      </div>
+
+      <div class="grid-2">
+        <article class="card reveal">
+          <h3 data-i18n="contact_form_title">Send a message</h3>
+          <form id="contactForm">
+            <label>
+              <span data-i18n="form_service">Service</span>
+              <select name="service" class="input" required>
+                <option value="" selected disabled data-i18n="select_service">Select a service</option>
+                <option value="Website Development" data-i18n="service_web">Website Development</option>
+                <option value="Shop Data Analysis" data-i18n="service_data">Shop Data Analysis</option>
+                <option value="Logo & Branding" data-i18n="service_brand">Logo & Branding</option>
+                <option value="Social Media Campaigns" data-i18n="service_social">Social Media Campaigns</option>
+                <option value="Business Package" data-i18n="service_package">Business Package</option>
+                <option value="Digital Launch Package" data-i18n="service_launch">Digital Launch Package</option>
+              </select>
+            </label>
+
+            <label>
+              <span data-i18n="form_name">Your Name</span>
+              <input class="input" type="text" name="name" data-i18n-placeholder="your_name" placeholder="Your name" required />
+            </label>
+
+            <label>
+              <span data-i18n="form_email">Email</span>
+              <input class="input" type="email" name="email" data-i18n-placeholder="your_email" placeholder="your@email.com" required />
+            </label>
+
+            <label>
+              <span data-i18n="form_message">Message</span>
+              <textarea class="input" name="message" rows="5" data-i18n-placeholder="write_details" placeholder="Write details..." required></textarea>
+            </label>
+
+            <button class="btn primary" type="submit" data-i18n="send">Send</button>
+          </form>
+        </article>
+
+        <article class="card reveal">
+          <h3 data-i18n="direct_title">Direct</h3>
+          <p class="muted" data-i18n="direct_subtitle">You can also reach us here:</p>
+
+          <div class="direct">
+            <a class="direct-item" href="mailto:yaalacode@gmail.com" id="directEmail">
+              <span class="icon">✉️</span>
+              <span>
+                <b data-i18n="email_label">Email</b><br />
+                <span class="muted">yaalacode@gmail.com</span>
+              </span>
+            </a>
+
+            <button class="direct-item" id="copyPhone" type="button">
+              <span class="icon">📱</span>
+              <span>
+                <b data-i18n="phone_label">Phone</b><br />
+                <span class="muted" id="phoneText">+971-50-000-0000</span>
+              </span>
+            </button>
+
+            <a class="direct-item" href="https://www.facebook.com/Yaalacode/" target="_blank" rel="noopener">
+              <span class="icon">📘</span>
+              <span>
+                <b>Facebook</b><br />
+                <span class="muted">@Yaalacode</span>
+              </span>
+            </a>
+
+            <a class="direct-item" href="https://www.youtube.com/@yalacode" target="_blank" rel="noopener">
+              <span class="icon">▶️</span>
+              <span>
+                <b>YouTube</b><br />
+                <span class="muted">@yalacode</span>
+              </span>
+            </a>
+
+            <div class="note small muted" id="toast" aria-live="polite"></div>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container foot">
+      <div class="foot-left">
+        <p class="muted">© <span id="year"></span> YalaCode | Yala Business</p>
+        <p class="small muted" data-i18n="footer_text">Creative digital services for modern businesses.</p>
+      </div>
+
+      <div class="foot-right">
+        <a class="to-top" href="#top" data-i18n="back_top">Back to top ↑</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
